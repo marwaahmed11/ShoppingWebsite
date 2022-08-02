@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<persistence xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+
+<persistence-unit transaction-type="JTA" name="testUnit">
+
+<provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
+
+
+<properties>
+
+<property name="hibernate.ogm.datastore.provider" value="MONGODB"/>
+
+<property name="hibernate.ogm.mongodb.host" value="127.0.0.1"/>
+
+<property name="hibernate.ogm.mongodb.port" value="27017"/>
+
+<property name="hibernate.ogm.mongodb.database" value="testDB"/>
+
+<property name="jboss.as.jpa.adapterModule" value="org.jboss.as.jpa.hibernate:4"/>
+
+</properties>
+
+</persistence-unit>
+
+</persistence>
